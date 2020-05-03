@@ -28,7 +28,7 @@ export default function Rooms({handleDrawerClose}) {
                 <ListItemText primary={state.currentUser.nickName} />
             </ListItem>
             <Divider />
-            <List component="nav" aria-label="Rooms">
+            <List component='nav' aria-label='Rooms'>
                 {rooms.map((room) => (
                     <ListItem
                         key={room.id}
