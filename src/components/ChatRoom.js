@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useAppContext } from '../context/store';
 import Messages from './Messages';
-
 import { Grid, Typography, TextField, Button, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import clsx from 'clsx';
 
 const useStyles = makeStyles({
     spacingAroundSm: {
@@ -45,7 +45,7 @@ export default function ChatRoom() {
 
     return (
         <Grid container direction='column'>
-            <Grid item className={`${classes.spacingAroundSm} ${classes.staticContainer}`}>
+            <Grid item className={clsx(classes.spacingAroundSm, classes.staticContainer)}>
                 <Box textAlign='center'>
                     <Typography variant='h6' component='h2'>{currentRoom.name}</Typography>
                 </Box>

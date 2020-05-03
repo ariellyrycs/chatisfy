@@ -5,6 +5,7 @@ import { Grid, Box, Fab, useScrollTrigger, Zoom } from '@material-ui/core';
 
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import { makeStyles } from '@material-ui/styles';
+import clsx from 'clsx';
 
 const useStyles = makeStyles(() => {
     return {
@@ -67,7 +68,7 @@ function MessagesContainer({ currentMessages, chatRoomNode, classes, currentUser
         <Grid container justify='center' alignContent='flex-start' ref={chatRoomNode}>
             {currentMessages.map((message) =>
                 <Grid key={message.id} item xs={11}>
-                    <div className={`${classes.messageWrap} ${message.own ? classes.own : ''}`}>
+                    <div className={clsx(classes.messageWrap, message.own ? classes.own : '')}>
                         <Box component='span'>{message.own ? currentUser.nickName : users.data[message.from].nickName}</Box>
                         <Box>{message.content}</Box>
                         <div className={classes.time}><time>{message.createdTime}</time></div>
