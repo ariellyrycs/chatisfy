@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChatRoom /> should render chat room component 1`] = `
+<WithStyles(ForwardRef(Grid))
+  container={true}
+  direction="column"
+>
+  <WithStyles(ForwardRef(Grid))
+    className="makeStyles-spacingAroundSm-1 makeStyles-staticContainer-2"
+    item={true}
+  >
+    <Styled(MuiBox)
+      textAlign="center"
+    >
+      <WithStyles(ForwardRef(Typography))
+        component="h2"
+        variant="h6"
+      >
+        React is awesome Group
+      </WithStyles(ForwardRef(Typography))>
+    </Styled(MuiBox)>
+    <Messages
+      currentMessagesIds={
+        Array [
+          1,
+          2,
+          3,
+          4,
+        ]
+      }
+    />
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    className="makeStyles-spacingAroundSm-1"
+    item={true}
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        justify="center"
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={8}
+        >
+          <WithStyles(ForwardRef(TextField))
+            fullWidth={true}
+            id="message"
+            inputRef={[Function]}
+            label="Write here your message"
+            multiline={true}
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            rowsMax={2}
+            value=""
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="makeStyles-spacingAroundSm-1"
+          item={true}
+          md={3}
+        >
+          <WithStyles(ForwardRef(Button))
+            color="primary"
+            fullWidth={true}
+            type="submit"
+            variant="contained"
+          >
+            Send
+          </WithStyles(ForwardRef(Button))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </form>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
+`;

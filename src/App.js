@@ -1,6 +1,6 @@
 import React from 'react';
 import Main from './components/Main';
-
+import { ContextProvider } from './context/store';
 
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -17,8 +17,9 @@ function App() {
   const classes = useStyles();
   return (
     <div className={classes.container}>
-      <Main />
-
+      <ContextProvider>
+        <Main />
+      </ContextProvider>
     </div>
   );
 }

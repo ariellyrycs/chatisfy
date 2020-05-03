@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Rooms /> display component correctly 1`] = `
+<Fragment>
+  <WithStyles(ForwardRef(ListItem))>
+    <WithStyles(ForwardRef(ListItemText))
+      primary="Pedro"
+    />
+  </WithStyles(ForwardRef(ListItem))>
+  <WithStyles(ForwardRef(Divider)) />
+  <WithStyles(ForwardRef(List))
+    aria-label="Rooms"
+    component="nav"
+  >
+    <WithStyles(ForwardRef(ListItem))
+      button={true}
+      className="list-item"
+      key="1"
+      onClick={[Function]}
+      selected={false}
+    >
+      <WithStyles(ForwardRef(ListItemText)) />
+    </WithStyles(ForwardRef(ListItem))>
+  </WithStyles(ForwardRef(List))>
+</Fragment>
+`;

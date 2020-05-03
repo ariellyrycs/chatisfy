@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Messages /> render the message component 1`] = `
+<div
+  className="makeStyles-chatView-2"
+>
+  <MessagesContainer
+    chatRoomNode={
+      Object {
+        "current": undefined,
+      }
+    }
+    classes={
+      Object {
+        "chatView": "makeStyles-chatView-2",
+        "goDownButton": "makeStyles-goDownButton-1",
+        "messageWrap": "makeStyles-messageWrap-3",
+        "own": "makeStyles-own-4",
+        "time": "makeStyles-time-5",
+      }
+    }
+    currentMessages={
+      Array [
+        Object {
+          "content": "Make sure you don't, as they say, go whole",
+          "createdTime": "12:12",
+          "from": 1,
+          "id": 1,
+          "seen": true,
+        },
+        Object {
+          "content": "Are you and Karen gonna, as they say, pig out?",
+          "createdTime": "12:14",
+          "from": 2,
+          "id": 2,
+          "seen": false,
+        },
+      ]
+    }
+    users={
+      Object {
+        "1": Object {
+          "name": "GEORGE",
+          "thumbnail": "",
+        },
+        "2": Object {
+          "name": "SANDRA",
+          "thumbnail": "",
+        },
+      }
+    }
+  />
+  <ScrollBottom>
+    <WithStyles(ForwardRef(Fab))
+      aria-label="scroll down"
+      color="secondary"
+      size="small"
+    >
+      <KeyboardArrowDownIcon />
+    </WithStyles(ForwardRef(Fab))>
+  </ScrollBottom>
+  <div />
+</div>
+`;

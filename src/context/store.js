@@ -1,6 +1,6 @@
 import React, { useReducer, createContext, useContext } from 'react';
 import Mock from '../Mock';
-import {generateUId} from '../Utils/General.js';
+import {generateUId, generateTime} from '../Utils/General.js';
 
 
 const currentUser = {
@@ -18,7 +18,42 @@ const initialState = {
 
 const mainReduce = (state, action) => {
 	switch (action.type) {
-
+		case 'UPDATE_ROOM':
+			return {
+				...state,
+				selectedRoom: action.roomId
+			};
+		case 'SEND_MESSAGE':
+			let currentId = generateUId();
+			let rooms = state.rooms;
+			let messageByRooms = rooms.messages;
+			let messages = state.messages;
+			let currentRoomId = state.selectedRoom,
+				sentBy = action.sentBy;
+			return {
+				...state,
+				rooms: {
+					...rooms,
+					messages: {
+						...rooms.messages,
+						[currentRoomId]: [...(messageByRooms[currentRoomId] || []), currentId]
+					}
+				},
+				messages: {
+					...messages,
+					data: {
+						...messages.data,
+						[currentId]: {
+							id: currentId,
+							from: sentBy,
+							content: action.message,
+							createdTime: generateTime(),
+							seenBy: [],
+							own: action.from === sentBy
+						}
+					}
+				}
+			};
 		case 'UPDATE_NICKNAME':
 			return {
 				...state,
