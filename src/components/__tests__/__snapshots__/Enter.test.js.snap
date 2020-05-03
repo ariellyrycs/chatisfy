@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Enter /> should render chat room component 1`] = `
+<WithStyles(ForwardRef(Grid))
+  alignItems="center"
+  className="makeStyles-fullHeight-2"
+  container={true}
+  justify="center"
+>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    md={3}
+    sm={6}
+  >
+    <WithStyles(ForwardRef(Paper))>
+      <form
+        onSubmit={[Function]}
+      >
+        <WithStyles(ForwardRef(Grid))
+          alignItems="center"
+          container={true}
+          justify="center"
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            xs={10}
+          >
+            <WithStyles(ForwardRef(FormControl))
+              className="makeStyles-spacing-1"
+              fullWidth={true}
+            >
+              <WithStyles(ForwardRef(InputLabel))
+                htmlFor="nickname-enter"
+              >
+                Enter your NickName
+              </WithStyles(ForwardRef(InputLabel))>
+              <WithStyles(ForwardRef(Input))
+                aria-describedby="Enter nickname"
+                id="nickname-enter"
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                value=""
+              />
+              <WithStyles(ForwardRef(FormHelperText))
+                error={true}
+                id="nickname-enter-helper-text"
+              />
+            </WithStyles(ForwardRef(FormControl))>
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            xs={10}
+          >
+            <WithStyles(ForwardRef(Button))
+              className="makeStyles-spacing-1"
+              color="primary"
+              fullWidth={true}
+              id="enter-log"
+              type="submit"
+              variant="contained"
+            >
+              Enter
+            </WithStyles(ForwardRef(Button))>
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </form>
+    </WithStyles(ForwardRef(Paper))>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
+`;
