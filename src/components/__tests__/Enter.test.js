@@ -12,20 +12,20 @@ describe('<Enter />', () => {
         const contextValues = {
             state: {
             },
-            dispatch: () => {}
+            dispatch: () => { }
         };
         jest.spyOn(Store, 'useAppContext')
             .mockImplementation(() => contextValues);
         const tree = shallow(<Enter />);
         expect(tree.find('#nickname-enter-helper-text').text()).toBe('');
-        tree.find('form').simulate('submit', {preventDefault: () => {}});
+        tree.find('form').simulate('submit', { preventDefault: () => { } });
         expect(tree.find('#nickname-enter-helper-text').text()).toBe('Should enter a valid nickName');
     });
 
     test('should make the propert changes and trigget distach', () => {
         const dispatchStub = jest.fn();
         const setLogStub = jest.fn();
-        
+
         const contextValues = {
             state: {
                 currentUser: {
@@ -36,10 +36,10 @@ describe('<Enter />', () => {
         };
         jest.spyOn(Store, 'useAppContext')
             .mockImplementation(() => contextValues);
-        const tree = shallow(<Enter setLog={setLogStub}/>);
+        const tree = shallow(<Enter setLog={setLogStub} />);
         expect(tree.find('#nickname-enter-helper-text').text()).toBe('');
         tree.find('#nickname-enter').simulate('change', { target: { value: 'Changed' } })
-        tree.find('#nickname-enter').simulate('keydown', {keyCode: 13, shiftKey: false, preventDefault: () => {}});
+        tree.find('#nickname-enter').simulate('keydown', { keyCode: 13, shiftKey: false, preventDefault: () => { } });
         expect(dispatchStub).toHaveBeenCalledWith(
             expect.objectContaining({
                 type: 'UPDATE_NICKNAME', nickName: 'Changed', sentBy: 2
@@ -52,11 +52,11 @@ describe('<Enter />', () => {
         const contextValues = {
             state: {
             },
-            dispatch: () => {}
+            dispatch: () => { }
         };
         jest.spyOn(Store, 'useAppContext')
             .mockImplementation(() => contextValues);
-        const tree = shallow(<Enter/>);
+        const tree = shallow(<Enter />);
         expect(toJson(tree)).toMatchSnapshot();
     });
 });

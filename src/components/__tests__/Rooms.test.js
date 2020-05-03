@@ -30,10 +30,10 @@ describe('<Rooms />', () => {
         };
         jest.spyOn(Store, 'useAppContext')
             .mockImplementation(() => contextValues);
-        const tree = shallow(<Rooms handleDrawerClose={handleDrawerCloseStub}/>);
+        const tree = shallow(<Rooms handleDrawerClose={handleDrawerCloseStub} />);
         tree.find('.list-item').first().simulate('click');
         expect(dispatchStub).toHaveBeenCalledWith(
-            expect.objectContaining({type: 'UPDATE_ROOM', roomId: 1})
+            expect.objectContaining({ type: 'UPDATE_ROOM', roomId: 1 })
         );
         expect(handleDrawerCloseStub).toHaveBeenCalled();
     });
@@ -56,11 +56,11 @@ describe('<Rooms />', () => {
                     nickName: 'Pedro'
                 }
             },
-            dispatch: () => {}
+            dispatch: () => { }
         };
         jest.spyOn(Store, 'useAppContext')
             .mockImplementation(() => contextValues);
-        const tree = shallow(<Rooms handleDrawerClose={() => {}}/>);
+        const tree = shallow(<Rooms handleDrawerClose={() => { }} />);
         expect(toJson(tree)).toMatchSnapshot();
     });
 });

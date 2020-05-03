@@ -1,6 +1,6 @@
 import React, { useReducer, createContext, useContext } from 'react';
 import Mock from '../Mock';
-import {generateUId, generateTime} from '../Utils/General.js';
+import { generateUId, generateTime } from '../Utils/General.js';
 
 
 const currentUser = {
@@ -9,6 +9,7 @@ const currentUser = {
 };
 
 const Context = createContext();
+
 const useAppContext = () => useContext(Context);
 
 const initialState = {

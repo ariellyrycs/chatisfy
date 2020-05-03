@@ -43,7 +43,7 @@ describe('<Messages />', () => {
         const currentMessagesIds = [1, 2];
         jest.spyOn(Store, 'useAppContext')
             .mockImplementation(() => contextValues);
-        const tree = shallow(<Messages currentMessagesIds={currentMessagesIds}/>);
+        const tree = shallow(<Messages currentMessagesIds={currentMessagesIds} />);
         expect(toJson(tree)).toMatchSnapshot();
     });
 });

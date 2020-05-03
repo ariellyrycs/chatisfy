@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import ChatRoom from './ChatRoom';
 import Rooms from './Rooms';
 import {
@@ -11,10 +10,8 @@ import {
     Drawer,
     IconButton
 } from '@material-ui/core';
-
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-
 import ScopedCssBaseline from '@material-ui/core/ScopedCssBaseline';
 
 function ChatAppBar({ handleDrawerOpen }) {
@@ -49,7 +46,7 @@ function MenuDrawer({ handleDrawerClose, open }) {
             open={open}
         >
             <div>
-                <IconButton 
+                <IconButton
                     id='arrow-button'
                     onClick={handleDrawerClose}>
                     <ChevronLeftIcon />
@@ -70,7 +67,7 @@ export default function ChatDrawer() {
     const handleDrawerClose = () => {
         setOpen(false);
     };
-    
+
     return (
         <ScopedCssBaseline>
             <ChatAppBar handleDrawerOpen={handleDrawerOpen} />

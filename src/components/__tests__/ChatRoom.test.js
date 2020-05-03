@@ -17,13 +17,13 @@ describe('<ChatRoom />', () => {
                         }
                     },
                     messages: {
-                        1: [1,2,3,4]
+                        1: [1, 2, 3, 4]
                     }
                 },
-                
+
                 selectedRoom: 1
             },
-            dispatch: () => {}
+            dispatch: () => { }
         };
         jest.spyOn(Store, 'useAppContext')
             .mockImplementation(() => contextValues);

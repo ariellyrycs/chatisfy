@@ -1,4 +1,4 @@
-import {generateUId, generateTime} from './Utils/General';
+import { generateUId, generateTime } from './Utils/General';
 
 
 //this is a file that creates initial State data.
@@ -23,20 +23,20 @@ const generateDefaultIdUsers = (arr, users) => {
 };
 
 const mockedUsers = [{
-	nickName: 'George',
-	id: generateUId()
+    nickName: 'George',
+    id: generateUId()
 }, {
-	nickName: 'Alice',
-	id: generateUId()
+    nickName: 'Alice',
+    id: generateUId()
 }, {
-	nickName: 'Brandom',
-	id: generateUId()
+    nickName: 'Brandom',
+    id: generateUId()
 }, {
-	nickName: 'Erick',
-	id: generateUId()
+    nickName: 'Erick',
+    id: generateUId()
 }, {
-	nickName: 'Alexandra',
-	id: generateUId()
+    nickName: 'Alexandra',
+    id: generateUId()
 }];
 
 const mockedRooms = mockedUsers.map(user => ({
@@ -46,9 +46,9 @@ const mockedRooms = mockedUsers.map(user => ({
 }));
 
 const mockedGroupRooms = [{
-	name: 'React is awesome Group',
-	thumbnail: '',
-	id: generateUId()
+    name: 'React is awesome Group',
+    thumbnail: '',
+    id: generateUId()
 }];
 
 const allRooms = [
@@ -57,23 +57,23 @@ const allRooms = [
 ];
 
 const mockedMessages = [{
-	id: generateUId(),
-	from: mockedUsers[0].id,
-	content: 'Make sure you don\'t, as they say, go whole',
+    id: generateUId(),
+    from: mockedUsers[0].id,
+    content: 'Make sure you don\'t, as they say, go whole',
     createdTime: generateTime(),
-	seen: false
+    seen: false
 }, {
-	id: generateUId(),
-	from: mockedUsers[1].id,
-	content: 'Are you and Karen gonna, as they say, pig out?',
+    id: generateUId(),
+    from: mockedUsers[1].id,
+    content: 'Are you and Karen gonna, as they say, pig out?',
     createdTime: generateTime(),
-	seen: false
+    seen: false
 }, {
-	id: generateUId(),
-	from: mockedUsers[2].id,
-	content: 'how did it turn out?  Sounds nummy!\n',
-	createdTime: generateTime(),
-	seen: false
+    id: generateUId(),
+    from: mockedUsers[2].id,
+    content: 'how did it turn out?  Sounds nummy!\n',
+    createdTime: generateTime(),
+    seen: false
 }];
 
 const Mock = {

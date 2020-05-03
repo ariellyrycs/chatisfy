@@ -16,13 +16,16 @@ const useStyles = makeStyles({
 
 function Enter({ setLog }) {
     const [nickName, setNickName] = useState('');
+
     const [error, setError] = useState('');
+
     const { state, dispatch } = useAppContext();
+
     const classes = useStyles();
 
     const procceed = (e) => {
         e.preventDefault();
-        
+
         if (nickName.trim() === '') {
             setError('Should enter a valid nickName');
         } else {
@@ -58,7 +61,7 @@ function Enter({ setLog }) {
                                     <FormHelperText
                                         id='nickname-enter-helper-text'
                                         error={true}
-                                        >{error}
+                                    >{error}
                                     </FormHelperText>
                                 </FormControl>
                             </Grid>

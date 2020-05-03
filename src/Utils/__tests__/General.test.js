@@ -1,4 +1,4 @@
-import {generateUId,  generateTime} from '../General';
+import { generateUId, generateTime } from '../General';
 
 
 describe('Generate time', () => {

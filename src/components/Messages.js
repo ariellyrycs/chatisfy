@@ -1,8 +1,6 @@
 import React, { useRef, useLayoutEffect } from 'react';
 import { useAppContext } from '../context/store';
-
 import { Grid, Box, Fab, useScrollTrigger, Zoom } from '@material-ui/core';
-
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import { makeStyles } from '@material-ui/styles';
 import clsx from 'clsx';
@@ -81,10 +79,15 @@ function MessagesContainer({ currentMessages, chatRoomNode, classes, currentUser
 
 export default function Messages({ currentMessagesIds }) {
     const chatRoomNode = useRef();
+
     const { state } = useAppContext();
+
     const currentMessages = currentMessagesIds.map(id => state.messages.data[id]);
+
     const classes = useStyles();
+
     const container = useRef();
+
     const bottonReference = useRef();
 
     useLayoutEffect(() => {
